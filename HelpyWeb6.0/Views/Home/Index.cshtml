@@ -1,0 +1,900 @@
+﻿@using HelpyAdmin.Models
+@using Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    ViewData["Title"] = "Home Page";
+    List<Bills> billsList = ViewData["Bills"] != null ? ViewData["Bills"] as List<Bills> : new List<Bills>();
+    List<Users> usersList = ViewData["users"] != null ? ViewData["users"] as List<Users> : new List<Users>();
+}
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet"> <!-- Bootstrap Icons -->
+<style>
+    .input-group .form-control {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+
+    .input-group .btn {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+
+    .selection-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Two equal-width columns */
+        gap: 10px;
+        max-width: 600px;
+        margin: 0 auto;
+        justify-items: center;
+    }
+
+    .option-button {
+        padding: 10px 20px;
+        border: 1px solid #FF6B81; /* Adjust to preferred color */
+        border-radius: 20px;
+        background-color: #f0f4ff;
+        color: #333;
+        width: 100%; /* Make buttons fill the grid cell */
+        text-align: center;
+        cursor: pointer;
+        transition: background-color 0.3s, color 0.3s;
+    }
+
+        .option-button.selected {
+            background-color: #FF6B81; /* Selected color */
+            color: white;
+        }
+</style>
+
+<div class="container">
+    <div class="page-inner">
+        <div class="d-flex align-items-left align-items-md-center flex-column flex-md-row pt-2 pb-4">
+            <div>
+                <h3 class="fw-bold mb-3">Dashboard</h3>
+                <h6 class="op-7 mb-2">Manage Everything here</h6>
+            </div>
+            <div class="ms-md-auto py-2 py-md-0">
+                <a href="#" class="btn btn-label-info btn-round me-2">Manage</a>
+                <a href="#" class="btn btn-primary btn-round" data-bs-toggle="modal" data-bs-target="#addUserModal">Add User</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6 col-md-3">
+                <div class="card card-stats card-round">
+                    <div class="card-body">
+                        <div class="row align-items-center">
+                            <div class="col-icon">
+                                <div class="icon-big text-center icon-primary bubble-shadow-small">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                            </div>
+                            <div class="col col-stats ms-3 ms-sm-0">
+                                <div class="numbers">
+                                    <p class="card-category">Users</p>
+                                    <h4 class="card-title">@usersList.Count()</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-3">
+                <div class="card card-stats card-round">
+                    <div class="card-body">
+                        <div class="row align-items-center">
+                            <div class="col-icon">
+                                <div class="icon-big text-center icon-info bubble-shadow-small">
+                                    <i class="fas fa-user-check"></i>
+                                </div>
+                            </div>
+                            <div class="col col-stats ms-3 ms-sm-0">
+                                <div class="numbers">
+                                    <p class="card-category">Subscribers</p>
+                                    <h4 class="card-title">1303</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-3">
+                <div class="card card-stats card-round">
+                    <div class="card-body">
+                        <div class="row align-items-center">
+                            <div class="col-icon">
+                                <div class="icon-big text-center icon-success bubble-shadow-small">
+                                    <i class="fas fa-luggage-cart"></i>
+                                </div>
+                            </div>
+                            <div class="col col-stats ms-3 ms-sm-0">
+                                <div class="numbers">
+                                    <p class="card-category">Revenue</p>
+                                    <h4 class="card-title">$ 1,345</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-3">
+                <div class="card card-stats card-round">
+                    <div class="card-body">
+                        <div class="row align-items-center">
+                            <div class="col-icon">
+                                <div class="icon-big text-center icon-secondary bubble-shadow-small">
+                                    <i class="far fa-check-circle"></i>
+                                </div>
+                            </div>
+                            <div class="col col-stats ms-3 ms-sm-0">
+                                <div class="numbers">
+                                    <p class="card-category">Reported Users</p>
+                                    <h4 class="card-title">576</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8">
+                <div class="card card-round">
+                    <div class="card-header">
+                        <div class="card-head-row">
+                            <div class="card-title">User Statistics</div>
+                            <div class="card-tools">
+                                <a href="#"
+                                   class="btn btn-label-success btn-round btn-sm me-2">
+                                    <span class="btn-label">
+                                        <i class="fa fa-pencil"></i>
+                                    </span>
+                                    Export
+                                </a>
+                                <a href="#" class="btn btn-label-info btn-round btn-sm">
+                                    <span class="btn-label">
+                                        <i class="fa fa-print"></i>
+                                    </span>
+                                    Print
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="chart-container" style="min-height: 375px">
+                            <canvas id="statisticsChart"></canvas>
+                        </div>
+                        <div id="myChartLegend"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card card-primary card-round">
+                    <div class="card-header">
+                        <div class="card-head-row">
+                            <div class="card-title">Daily Revenue</div>
+                            <div class="card-tools">
+                                <div class="dropdown">
+                                    <button class="btn btn-sm btn-label-light dropdown-toggle"
+                                            type="button"
+                                            id="dropdownMenuButton"
+                                            data-bs-toggle="dropdown"
+                                            aria-haspopup="true"
+                                            aria-expanded="false">
+                                        Export
+                                    </button>
+                                    <div class="dropdown-menu"
+                                         aria-labelledby="dropdownMenuButton">
+                                        <a class="dropdown-item" href="#">Action</a>
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                        <a class="dropdown-item" href="#">Something else here</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-category">March 25 - April 02</div>
+                    </div>
+                    <div class="card-body pb-0">
+                        <div class="mb-4 mt-2">
+                            <h1>$4,578.58</h1>
+                        </div>
+                        <div class="pull-in">
+                            <canvas id="dailySalesChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+                <div class="card card-round">
+                    <div class="card-body pb-0">
+                        <div class="h1 fw-bold float-end text-primary">+5%</div>
+                        <h2 class="mb-2">17</h2>
+                        <p class="text-muted">Users online</p>
+                        <div class="pull-in sparkline-fix">
+                            <div id="lineChart"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card card-round">
+                    <div class="card-header">
+                        <div class="card-head-row card-tools-still-right">
+                            <h4 class="card-title">Users Geolocation</h4>
+                            <div class="card-tools">
+                                <button class="btn btn-icon btn-link btn-primary btn-xs">
+                                    <span class="fa fa-angle-down"></span>
+                                </button>
+                                <button class="btn btn-icon btn-link btn-primary btn-xs btn-refresh-card">
+                                    <span class="fa fa-sync-alt"></span>
+                                </button>
+                                <button class="btn btn-icon btn-link btn-primary btn-xs">
+                                    <span class="fa fa-times"></span>
+                                </button>
+                            </div>
+                        </div>
+                        <p class="card-category">
+                            Map of the distribution of users around the world
+                        </p>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="table-responsive table-hover table-sales">
+                                    <table class="table">
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <div class="flag">
+                                                        <img src="assets/img/flags/id.png"
+                                                             alt="indonesia" />
+                                                    </div>
+                                                </td>
+                                                <td>Indonesia</td>
+                                                <td class="text-end">2.320</td>
+                                                <td class="text-end">42.18%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="flag">
+                                                        <img src="assets/img/flags/us.png"
+                                                             alt="united states" />
+                                                    </div>
+                                                </td>
+                                                <td>USA</td>
+                                                <td class="text-end">240</td>
+                                                <td class="text-end">4.36%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="flag">
+                                                        <img src="assets/img/flags/au.png"
+                                                             alt="australia" />
+                                                    </div>
+                                                </td>
+                                                <td>Australia</td>
+                                                <td class="text-end">119</td>
+                                                <td class="text-end">2.16%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="flag">
+                                                        <img src="assets/img/flags/ru.png"
+                                                             alt="russia" />
+                                                    </div>
+                                                </td>
+                                                <td>Russia</td>
+                                                <td class="text-end">1.081</td>
+                                                <td class="text-end">19.65%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="flag">
+                                                        <img src="assets/img/flags/cn.png"
+                                                             alt="china" />
+                                                    </div>
+                                                </td>
+                                                <td>China</td>
+                                                <td class="text-end">1.100</td>
+                                                <td class="text-end">20%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="flag">
+                                                        <img src="assets/img/flags/br.png"
+                                                             alt="brazil" />
+                                                    </div>
+                                                </td>
+                                                <td>Brasil</td>
+                                                <td class="text-end">640</td>
+                                                <td class="text-end">11.63%</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mapcontainer">
+                                    <div id="world-map"
+                                         class="w-100"
+                                         style="height: 300px"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card card-round">
+                    <div class="card-body">
+                        <div class="card-head-row card-tools-still-right">
+                            <div class="card-title">New Users</div>
+                            <div class="card-tools">
+                                <div class="dropdown">
+                                    <button class="btn btn-icon btn-clean me-0"
+                                            type="button"
+                                            id="dropdownMenuButton"
+                                            data-bs-toggle="dropdown"
+                                            aria-haspopup="true"
+                                            aria-expanded="false">
+                                        <i class="fas fa-ellipsis-h"></i>
+                                    </button>
+                                    <div class="dropdown-menu"
+                                         aria-labelledby="dropdownMenuButton">
+                                        <a class="dropdown-item" href="#">Action</a>
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                        <a class="dropdown-item" href="#">Something else here</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-list py-4">
+                            <div class="item-list">
+                                <div class="avatar">
+                                    <img src="assets/img/jm_denis.jpg"
+                                         alt="..."
+                                         class="avatar-img rounded-circle" />
+                                </div>
+                                <div class="info-user ms-3">
+                                    <div class="username">Jimmy Denis</div>
+                                    <div class="status">Graphic Designer</div>
+                                </div>
+                                <button class="btn btn-icon btn-link op-8 me-1">
+                                    <i class="far fa-envelope"></i>
+                                </button>
+                                <button class="btn btn-icon btn-link btn-danger op-8">
+                                    <i class="fas fa-ban"></i>
+                                </button>
+                            </div>
+                            <div class="item-list">
+                                <div class="avatar">
+                                    <span class="avatar-title rounded-circle border border-white">CF</span>
+                                </div>
+                                <div class="info-user ms-3">
+                                    <div class="username">Chandra Felix</div>
+                                    <div class="status">Sales Promotion</div>
+                                </div>
+                                <button class="btn btn-icon btn-link op-8 me-1">
+                                    <i class="far fa-envelope"></i>
+                                </button>
+                                <button class="btn btn-icon btn-link btn-danger op-8">
+                                    <i class="fas fa-ban"></i>
+                                </button>
+                            </div>
+                            <div class="item-list">
+                                <div class="avatar">
+                                    <img src="assets/img/talha.jpg"
+                                         alt="..."
+                                         class="avatar-img rounded-circle" />
+                                </div>
+                                <div class="info-user ms-3">
+                                    <div class="username">Talha</div>
+                                    <div class="status">Front End Designer</div>
+                                </div>
+                                <button class="btn btn-icon btn-link op-8 me-1">
+                                    <i class="far fa-envelope"></i>
+                                </button>
+                                <button class="btn btn-icon btn-link btn-danger op-8">
+                                    <i class="fas fa-ban"></i>
+                                </button>
+                            </div>
+                            <div class="item-list">
+                                <div class="avatar">
+                                    <img src="assets/img/chadengle.jpg"
+                                         alt="..."
+                                         class="avatar-img rounded-circle" />
+                                </div>
+                                <div class="info-user ms-3">
+                                    <div class="username">Chad</div>
+                                    <div class="status">CEO Zeleaf</div>
+                                </div>
+                                <button class="btn btn-icon btn-link op-8 me-1">
+                                    <i class="far fa-envelope"></i>
+                                </button>
+                                <button class="btn btn-icon btn-link btn-danger op-8">
+                                    <i class="fas fa-ban"></i>
+                                </button>
+                            </div>
+                            <div class="item-list">
+                                <div class="avatar">
+                                    <span class="avatar-title rounded-circle border border-white bg-primary">H</span>
+                                </div>
+                                <div class="info-user ms-3">
+                                    <div class="username">Admin</div>
+                                    <div class="status">Administrator</div>
+                                </div>
+                                <button class="btn btn-icon btn-link op-8 me-1">
+                                    <i class="far fa-envelope"></i>
+                                </button>
+                                <button class="btn btn-icon btn-link btn-danger op-8">
+                                    <i class="fas fa-ban"></i>
+                                </button>
+                            </div>
+                            <div class="item-list">
+                                <div class="avatar">
+                                    <span class="avatar-title rounded-circle border border-white bg-secondary">F</span>
+                                </div>
+                                <div class="info-user ms-3">
+                                    <div class="username">Farrah</div>
+                                    <div class="status">Marketing</div>
+                                </div>
+                                <button class="btn btn-icon btn-link op-8 me-1">
+                                    <i class="far fa-envelope"></i>
+                                </button>
+                                <button class="btn btn-icon btn-link btn-danger op-8">
+                                    <i class="fas fa-ban"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="card card-round">
+                    <div class="card-header">
+                        <div class="card-head-row card-tools-still-right">
+                            <div class="card-title">Transaction History</div>
+                            <div class="card-tools">
+                                <div class="dropdown">
+                                    <button class="btn btn-icon btn-clean me-0"
+                                            type="button"
+                                            id="dropdownMenuButton"
+                                            data-bs-toggle="dropdown"
+                                            aria-haspopup="true"
+                                            aria-expanded="false">
+                                        <i class="fas fa-ellipsis-h"></i>
+                                    </button>
+                                    <div class="dropdown-menu"
+                                         aria-labelledby="dropdownMenuButton">
+                                        <a class="dropdown-item" href="#">Action</a>
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                        <a class="dropdown-item" href="#">Something else here</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body p-0">
+                        <div class="table-responsive">
+                            <!-- Projects table -->
+                            <table class="table align-items-center mb-0">
+                                <thead class="thead-light">
+                                    <tr>
+                                        <th scope="col">Payment Number</th>
+                                        <th scope="col" class="text-end">Date & Time</th>
+                                        <th scope="col" class="text-end">Amount</th>
+                                        <th scope="col" class="text-end">Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">
+                                            <button class="btn btn-icon btn-round btn-success btn-sm me-2">
+                                                <i class="fa fa-check"></i>
+                                            </button>
+                                            Payment from #10231
+                                        </th>
+                                        <td class="text-end">Mar 19, 2020, 2.45pm</td>
+                                        <td class="text-end">$250.00</td>
+                                        <td class="text-end">
+                                            <span class="badge badge-success">Completed</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">
+                                            <button class="btn btn-icon btn-round btn-success btn-sm me-2">
+                                                <i class="fa fa-check"></i>
+                                            </button>
+                                            Payment from #10231
+                                        </th>
+                                        <td class="text-end">Mar 19, 2020, 2.45pm</td>
+                                        <td class="text-end">$250.00</td>
+                                        <td class="text-end">
+                                            <span class="badge badge-success">Completed</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">
+                                            <button class="btn btn-icon btn-round btn-success btn-sm me-2">
+                                                <i class="fa fa-check"></i>
+                                            </button>
+                                            Payment from #10231
+                                        </th>
+                                        <td class="text-end">Mar 19, 2020, 2.45pm</td>
+                                        <td class="text-end">$250.00</td>
+                                        <td class="text-end">
+                                            <span class="badge badge-success">Completed</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">
+                                            <button class="btn btn-icon btn-round btn-success btn-sm me-2">
+                                                <i class="fa fa-check"></i>
+                                            </button>
+                                            Payment from #10231
+                                        </th>
+                                        <td class="text-end">Mar 19, 2020, 2.45pm</td>
+                                        <td class="text-end">$250.00</td>
+                                        <td class="text-end">
+                                            <span class="badge badge-success">Completed</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">
+                                            <button class="btn btn-icon btn-round btn-success btn-sm me-2">
+                                                <i class="fa fa-check"></i>
+                                            </button>
+                                            Payment from #10231
+                                        </th>
+                                        <td class="text-end">Mar 19, 2020, 2.45pm</td>
+                                        <td class="text-end">$250.00</td>
+                                        <td class="text-end">
+                                            <span class="badge badge-success">Completed</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">
+                                            <button class="btn btn-icon btn-round btn-success btn-sm me-2">
+                                                <i class="fa fa-check"></i>
+                                            </button>
+                                            Payment from #10231
+                                        </th>
+                                        <td class="text-end">Mar 19, 2020, 2.45pm</td>
+                                        <td class="text-end">$250.00</td>
+                                        <td class="text-end">
+                                            <span class="badge badge-success">Completed</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">
+                                            <button class="btn btn-icon btn-round btn-success btn-sm me-2">
+                                                <i class="fa fa-check"></i>
+                                            </button>
+                                            Payment from #10231
+                                        </th>
+                                        <td class="text-end">Mar 19, 2020, 2.45pm</td>
+                                        <td class="text-end">$250.00</td>
+                                        <td class="text-end">
+                                            <span class="badge badge-success">Completed</span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal -->
+<!-- Modal -->
+<div class="modal fade" id="addUserModal" tabindex="-1" aria-labelledby="addUserModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="addUserModalLabel">Register User</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="registrationForm" enctype="multipart/form-data">
+                    <input type="hidden" id="latitude" name="Latitude">
+                    <input type="hidden" id="longitude" name="Longitude">
+                    <input type="hidden" id="city" name="City">
+                    <input type="hidden" id="country" name="Country">
+                    <div class="row">
+                        <!-- Email -->
+                        <div class="col-md-4 mb-3">
+                            <label for="email" class="form-label">Email <span class="text-danger">*</span></label>
+                            <input type="email" class="form-control" name="Email" id="email" required placeholder="Enter email">
+                        </div>
+                        <!-- Password -->
+                        <div class="col-md-4 mb-3">
+                            <label for="password" class="form-label">Password</label>
+                            <input type="password" name="Password" class="form-control" id="password" placeholder="Enter password">
+                        </div>
+                        <!-- Full Name -->
+                        <div class="col-md-4 mb-3">
+                            <label for="fullName" class="form-label">Full Name <span class="text-danger">*</span></label>
+                            <input type="text" name="FullName" class="form-control" id="fullName" required placeholder="Enter full name">
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <!-- Date of Birth -->
+                        <div class="col-md-4 mb-3">
+                            <label for="Birthday" class="form-label">Date of Birth</label>
+                            <input type="date" name="Birthday" class="form-control" id="birthday">
+                        </div>
+                        <!-- City -->
+                        <div class="col-md-4 mb-3">
+                            <label for="location" class="form-label">
+                                Location (City, Country) <span class="text-danger">*</span>
+                            </label>
+                            <div class="input-group">
+                                <input type="text" name="Location" class="form-control" id="location" placeholder="Enter location">
+                                <button class="btn btn-outline-secondary" type="button" id="getCurrentLocation">
+                                    <i class="bi bi-geo-alt-fill"></i>
+                                </button>
+                            </div>
+                            <ul class="list-group" id="suggestions" style="position: absolute; z-index: 1000; display: none; max-height: 200px; overflow-y: auto;"></ul>
+                        </div>
+                        <!-- Ethnicity -->
+                        <div class="col-md-4 mb-3">
+                            <label for="ethnicity" class="form-label">Ethnicity <span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" name="Ethnicity" id="ethnicity" required placeholder="Enter ethnicity">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <!-- Gender -->
+                        <div class="col-md-4 mb-3">
+                            <label for="gender" class="form-label">Gender <span class="text-danger">*</span></label>
+                            <select class="form-select form-control" name="Gender" id="gender" required>
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                        <!-- Sexuality -->
+                        <div class="col-md-4 mb-3">
+                            <label for="sexuality" class="form-label">Sexuality <span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" name="Sexuality" id="sexuality" required placeholder="Enter sexuality">
+                        </div>
+                        <!-- Occupation -->
+                        <div class="col-md-4 mb-3">
+                            <label for="occupation" class="form-label">Occupation</label>
+                            <input type="text" class="form-control" name="Occupation" id="occupation" placeholder="Enter occupation">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <!-- Images Upload -->
+                        <div class="col-md-4 mb-3">
+                            <label class="form-label">Upload Public Images <span class="text-danger">*</span></label>
+                            <input type="file" class="form-control" name="PublicImages" id="publicImages" multiple>
+                            <small class="form-text">You can upload between 1 to 8 images.</small>
+                        </div>
+                        <!-- Images Upload -->
+                        <div class="col-md-4 mb-3">
+                            <label class="form-label">Upload Private Images <span class="text-danger">*</span></label>
+                            <input type="file" class="form-control" name="PrivateImages" id="privateImages" multiple>
+                            <small class="form-text">You can upload between 1 to 8 images.</small>
+                        </div>
+                        <!-- Age -->
+                        <div class="col-md-4 mb-3">
+                            <label for="age" class="form-label">Age <span class="text-danger">*</span></label>
+                            <input type="number" class="form-control" name="Age" id="age" required placeholder="Enter age">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <!-- Description -->
+                        <div class="col-md-4 mb-3">
+                            <label for="description" class="form-label">Description</label>
+                            <textarea class="form-control" name="Description" id="description" rows="1" placeholder="Enter description"></textarea>
+                        </div>
+                        <!-- Intentions -->
+                        <div class="col-md-4 mb-3">
+                            <label for="intentions" class="form-label">Intentions</label>
+                            <input type="text" class="form-control" name="Intentions" id="intentions" placeholder="Enter intentions">
+                        </div>
+                        <!-- Type -->
+                        <div class="col-md-4 mb-3">
+                            <label for="type" class="form-label">Body Type <span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" name="BodyType" id="BodyType" required placeholder="Enter user type">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <!-- Selected Items -->
+                        <div class="col-md-4 mb-3">
+                            <label for="selectedItems" class="form-label">Bills <span class="text-danger">*</span></label>
+                            <select class="form-select form-control" name="SelectedItems" id="SelectedItems" multiple="multiple" required>
+                              
+                                <option value="1">Personal</option>
+                                <option value="1">Private</option>
+
+                            </select>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label for="type" class="form-label">Smoking <span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" name="Smoking" id="Smoking" required placeholder="Enter user type">
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label for="type" class="form-label">RelationshipStatus <span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" name="RelationshipStatus" id="RelationshipStatus" required placeholder="Enter user type">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4 mb-3">
+                            <label for="type" class="form-label">HeightInInches <span class="text-danger">*</span></label>
+                            <input type="number" class="form-control" name="HeightInInches" id="heightInInches" required placeholder="Enter user type">
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label for="type" class="form-label">Education <span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" name="Education" id="education" required placeholder="Enter user type">
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label for="type" class="form-label">Drinking <span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" name="Drinking" id="drinking" required placeholder="Enter user type">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4 mb-3">
+                            <label for="type" class="form-label">Language <span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" name="Language" id="language" required placeholder="Enter user type">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4 mb-3">
+                            <label for="type" class="form-label">Children <span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" name="Children" id="children" required placeholder="Enter user type">
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label for="type" class="form-label">LookingFor <span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" name="LookingFor" id="LookingFor" required placeholder="Enter user type">
+                        </div>
+                    </div>
+                </form>
+
+                <div id="result"></div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" id="saveUser">Save User</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDIARYnW2OXbfRa_UC7caDWDakUwuJgJBw&libraries=places"></script>
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/js/dashboard/dashboard.js"></script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+        const input = document.getElementById('location');
+        const suggestionsList = document.getElementById('suggestions');
+        const autocompleteService = new google.maps.places.AutocompleteService();
+        const geocoder = new google.maps.Geocoder();
+
+        // Hidden inputs
+        const latitudeInput = document.getElementById('latitude');
+        const longitudeInput = document.getElementById('longitude');
+        const cityInput = document.getElementById('city');
+        const countryInput = document.getElementById('country');
+
+        // Handle input events to fetch suggestions
+        input.addEventListener('input', () => {
+            const query = input.value.trim();
+            if (query) {
+                autocompleteService.getPlacePredictions(
+                    { input: query, types: ['(cities)'] },
+                    (predictions, status) => {
+                        if (status === google.maps.places.PlacesServiceStatus.OK && predictions) {
+                            showSuggestions(predictions);
+                        } else {
+                            suggestionsList.style.display = 'none';
+                        }
+                    }
+                );
+            } else {
+                suggestionsList.style.display = 'none';
+            }
+        });
+
+        // Display suggestions in the dropdown
+        function showSuggestions(predictions) {
+            suggestionsList.innerHTML = '';
+            predictions.forEach(prediction => {
+                const li = document.createElement('li');
+                li.textContent = prediction.description;
+                li.className = 'list-group-item list-group-item-action';
+                li.addEventListener('click', () => {
+                    input.value = prediction.description;
+                    suggestionsList.style.display = 'none';
+
+                    // Fetch and set additional details
+                    fetchPlaceDetails(prediction.place_id);
+                });
+                suggestionsList.appendChild(li);
+            });
+            suggestionsList.style.display = 'block';
+        }
+
+        // Fetch place details using Place ID
+        function fetchPlaceDetails(placeId) {
+            const placesService = new google.maps.places.PlacesService(document.createElement('div'));
+            placesService.getDetails({ placeId: placeId }, (place, status) => {
+                if (status === google.maps.places.PlacesServiceStatus.OK) {
+                    const lat = place.geometry.location.lat();
+                    const lng = place.geometry.location.lng();
+                    const city = place.address_components.find(component =>
+                        component.types.includes('locality')
+                    )?.long_name;
+                    const country = place.address_components.find(component =>
+                        component.types.includes('country')
+                    )?.long_name;
+
+                    // Populate hidden inputs
+                    latitudeInput.value = lat;
+                    longitudeInput.value = lng;
+                    cityInput.value = city || '';
+                    countryInput.value = country || '';
+
+                    console.log('Details:', { lat, lng, city, country });
+                } else {
+                    console.error('Error fetching place details:', status);
+                }
+            });
+        }
+
+        // Close suggestions when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!suggestionsList.contains(e.target) && e.target !== input) {
+                suggestionsList.style.display = 'none';
+            }
+        });
+
+        // Fetch current location and reverse geocode
+        const button = document.getElementById('getCurrentLocation');
+        button.addEventListener('click', () => {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(
+                    (position) => {
+                        const { latitude, longitude } = position.coords;
+                        latitudeInput.value = latitude;
+                        longitudeInput.value = longitude;
+
+                        // Reverse geocode to fetch city and country
+                        geocoder.geocode(
+                            { location: { lat: latitude, lng: longitude } },
+                            (results, status) => {
+                                if (status === google.maps.GeocoderStatus.OK && results.length > 0) {
+                                    const addressComponents = results[0].address_components;
+                                    const city = addressComponents.find(c => c.types.includes('locality'))?.long_name;
+                                    const country = addressComponents.find(c => c.types.includes('country'))?.long_name;
+
+                                    // Populate inputs
+                                    input.value = `${city}, ${country}`;
+                                    cityInput.value = city || '';
+                                    countryInput.value = country || '';
+                                } else {
+                                    console.error('Error reverse geocoding location:', status);
+                                }
+                            }
+                        );
+                    },
+                    (error) => {
+                        console.error('Error fetching location:', error);
+                        alert('Unable to fetch your location.');
+                    }
+                );
+            } else {
+                alert('Geolocation is not supported by your browser.');
+            }
+        });
+    });
+
+
+
+
+
+</script>

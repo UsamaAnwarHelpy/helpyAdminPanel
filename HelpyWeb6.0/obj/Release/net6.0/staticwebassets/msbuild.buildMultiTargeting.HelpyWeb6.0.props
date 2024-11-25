@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\HelpyWeb6.0.props" />
+</Project>

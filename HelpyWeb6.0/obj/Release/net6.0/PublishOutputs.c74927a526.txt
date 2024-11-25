@@ -1,0 +1,11 @@
+C:\Users\WMC\Desktop\HelpyWebAdmin\HelpyWeb6.0\obj\Release\net6.0\PubTmp\Out\HelpyWeb6.0.exe
+C:\Users\WMC\Desktop\HelpyWebAdmin\HelpyWeb6.0\obj\Release\net6.0\PubTmp\Out\appsettings.Development.json
+C:\Users\WMC\Desktop\HelpyWebAdmin\HelpyWeb6.0\obj\Release\net6.0\PubTmp\Out\appsettings.json
+C:\Users\WMC\Desktop\HelpyWebAdmin\HelpyWeb6.0\obj\Release\net6.0\PubTmp\Out\HelpyWeb6.0.dll
+C:\Users\WMC\Desktop\HelpyWebAdmin\HelpyWeb6.0\obj\Release\net6.0\PubTmp\Out\HelpyWeb6.0.deps.json
+C:\Users\WMC\Desktop\HelpyWebAdmin\HelpyWeb6.0\obj\Release\net6.0\PubTmp\Out\HelpyWeb6.0.runtimeconfig.json
+C:\Users\WMC\Desktop\HelpyWebAdmin\HelpyWeb6.0\obj\Release\net6.0\PubTmp\Out\HelpyWeb6.0.pdb
+C:\Users\WMC\Desktop\HelpyWebAdmin\HelpyWeb6.0\obj\Release\net6.0\PubTmp\Out\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\WMC\Desktop\HelpyWebAdmin\HelpyWeb6.0\obj\Release\net6.0\PubTmp\Out\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Users\WMC\Desktop\HelpyWebAdmin\HelpyWeb6.0\obj\Release\net6.0\PubTmp\Out\Newtonsoft.Json.dll
+C:\Users\WMC\Desktop\HelpyWebAdmin\HelpyWeb6.0\obj\Release\net6.0\PubTmp\Out\Newtonsoft.Json.Bson.dll

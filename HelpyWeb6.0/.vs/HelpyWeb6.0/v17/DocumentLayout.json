@@ -1,0 +1,110 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\WMC\\Desktop\\HelpyWebAdmin\\HelpyWeb6.0\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{BD56A5D9-5107-45A6-8473-AD3C62A5F196}|HelpyWeb6.0.csproj|c:\\users\\wmc\\desktop\\helpywebadmin\\helpyweb6.0\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{BD56A5D9-5107-45A6-8473-AD3C62A5F196}|HelpyWeb6.0.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD56A5D9-5107-45A6-8473-AD3C62A5F196}|HelpyWeb6.0.csproj|c:\\users\\wmc\\desktop\\helpywebadmin\\helpyweb6.0\\wwwroot\\js\\dashboard\\dashboard.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{BD56A5D9-5107-45A6-8473-AD3C62A5F196}|HelpyWeb6.0.csproj|solutionrelative:wwwroot\\js\\dashboard\\dashboard.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD56A5D9-5107-45A6-8473-AD3C62A5F196}|HelpyWeb6.0.csproj|c:\\users\\wmc\\desktop\\helpywebadmin\\helpyweb6.0\\viewmodel\\userregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD56A5D9-5107-45A6-8473-AD3C62A5F196}|HelpyWeb6.0.csproj|solutionrelative:viewmodel\\userregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD56A5D9-5107-45A6-8473-AD3C62A5F196}|HelpyWeb6.0.csproj|c:\\users\\wmc\\desktop\\helpywebadmin\\helpyweb6.0\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD56A5D9-5107-45A6-8473-AD3C62A5F196}|HelpyWeb6.0.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD56A5D9-5107-45A6-8473-AD3C62A5F196}|HelpyWeb6.0.csproj|c:\\users\\wmc\\desktop\\helpywebadmin\\helpyweb6.0\\models\\users.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD56A5D9-5107-45A6-8473-AD3C62A5F196}|HelpyWeb6.0.csproj|solutionrelative:models\\users.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UserRegistration.cs",
+              "DocumentMoniker": "C:\\Users\\WMC\\Desktop\\HelpyWebAdmin\\HelpyWeb6.0\\ViewModel\\UserRegistration.cs",
+              "RelativeDocumentMoniker": "ViewModel\\UserRegistration.cs",
+              "ToolTip": "C:\\Users\\WMC\\Desktop\\HelpyWebAdmin\\HelpyWeb6.0\\ViewModel\\UserRegistration.cs",
+              "RelativeToolTip": "ViewModel\\UserRegistration.cs",
+              "ViewState": "AQIAAB0AAABA+/////8hwC0AAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-24T19:54:29.987Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "dashboard.js",
+              "DocumentMoniker": "C:\\Users\\WMC\\Desktop\\HelpyWebAdmin\\HelpyWeb6.0\\wwwroot\\js\\Dashboard\\dashboard.js",
+              "RelativeDocumentMoniker": "wwwroot\\js\\Dashboard\\dashboard.js",
+              "ToolTip": "C:\\Users\\WMC\\Desktop\\HelpyWebAdmin\\HelpyWeb6.0\\wwwroot\\js\\Dashboard\\dashboard.js",
+              "RelativeToolTip": "wwwroot\\js\\Dashboard\\dashboard.js",
+              "ViewState": "AQIAAAQAAACg/v////8twA0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-11-24T19:53:29.98Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\WMC\\Desktop\\HelpyWebAdmin\\HelpyWeb6.0\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\WMC\\Desktop\\HelpyWebAdmin\\HelpyWeb6.0\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Controllers\\HomeController.cs",
+              "ViewState": "AQIAABoAAADAzczMzMwkwB8AAABCAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-24T19:44:05.078Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Users.cs",
+              "DocumentMoniker": "C:\\Users\\WMC\\Desktop\\HelpyWebAdmin\\HelpyWeb6.0\\Models\\Users.cs",
+              "RelativeDocumentMoniker": "Models\\Users.cs",
+              "ToolTip": "C:\\Users\\WMC\\Desktop\\HelpyWebAdmin\\HelpyWeb6.0\\Models\\Users.cs",
+              "RelativeToolTip": "Models\\Users.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-24T19:42:59.331Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\WMC\\Desktop\\HelpyWebAdmin\\HelpyWeb6.0\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\WMC\\Desktop\\HelpyWebAdmin\\HelpyWeb6.0\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Views\\Home\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAFcCAABKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-24T19:38:25.475Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

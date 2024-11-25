@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34622.214
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelpyWeb6.0", "HelpyWeb6.0.csproj", "{BD56A5D9-5107-45A6-8473-AD3C62A5F196}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BD56A5D9-5107-45A6-8473-AD3C62A5F196}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD56A5D9-5107-45A6-8473-AD3C62A5F196}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD56A5D9-5107-45A6-8473-AD3C62A5F196}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD56A5D9-5107-45A6-8473-AD3C62A5F196}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6F011A56-6729-4774-BB4E-8476928D1105}
+	EndGlobalSection
+EndGlobal
