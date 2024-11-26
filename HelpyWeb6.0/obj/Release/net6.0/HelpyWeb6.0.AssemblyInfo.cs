@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("HelpyWeb6.0")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f798c2edf0915adfde8c80f37ff939857f5e6f88")]
 [assembly: System.Reflection.AssemblyProductAttribute("HelpyWeb6.0")]
 [assembly: System.Reflection.AssemblyTitleAttribute("HelpyWeb6.0")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,25 +1,45 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\WMC\\Desktop\\HelpyWebAdmin\\HelpyWeb6.0\\",
+  "WorkspaceRootPath": "C:\\Users\\WMC\\Desktop\\helpy-git\\helpyAdminPanel\\HelpyWeb6.0\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BD56A5D9-5107-45A6-8473-AD3C62A5F196}|HelpyWeb6.0.csproj|c:\\users\\wmc\\desktop\\helpywebadmin\\helpyweb6.0\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{BD56A5D9-5107-45A6-8473-AD3C62A5F196}|HelpyWeb6.0.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BD56A5D9-5107-45A6-8473-AD3C62A5F196}|HelpyWeb6.0.csproj|c:\\users\\wmc\\desktop\\helpywebadmin\\helpyweb6.0\\wwwroot\\js\\dashboard\\dashboard.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{BD56A5D9-5107-45A6-8473-AD3C62A5F196}|HelpyWeb6.0.csproj|solutionrelative:wwwroot\\js\\dashboard\\dashboard.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BD56A5D9-5107-45A6-8473-AD3C62A5F196}|HelpyWeb6.0.csproj|c:\\users\\wmc\\desktop\\helpywebadmin\\helpyweb6.0\\viewmodel\\userregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BD56A5D9-5107-45A6-8473-AD3C62A5F196}|HelpyWeb6.0.csproj|solutionrelative:viewmodel\\userregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BD56A5D9-5107-45A6-8473-AD3C62A5F196}|HelpyWeb6.0.csproj|c:\\users\\wmc\\desktop\\helpywebadmin\\helpyweb6.0\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{BD56A5D9-5107-45A6-8473-AD3C62A5F196}|HelpyWeb6.0.csproj|c:\\users\\wmc\\desktop\\helpy-git\\helpyadminpanel\\helpyweb6.0\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BD56A5D9-5107-45A6-8473-AD3C62A5F196}|HelpyWeb6.0.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BD56A5D9-5107-45A6-8473-AD3C62A5F196}|HelpyWeb6.0.csproj|c:\\users\\wmc\\desktop\\helpywebadmin\\helpyweb6.0\\models\\users.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{BD56A5D9-5107-45A6-8473-AD3C62A5F196}|HelpyWeb6.0.csproj|c:\\users\\wmc\\desktop\\helpy-git\\helpyadminpanel\\helpyweb6.0\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{BD56A5D9-5107-45A6-8473-AD3C62A5F196}|HelpyWeb6.0.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD56A5D9-5107-45A6-8473-AD3C62A5F196}|HelpyWeb6.0.csproj|c:\\users\\wmc\\desktop\\helpy-git\\helpyadminpanel\\helpyweb6.0\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{BD56A5D9-5107-45A6-8473-AD3C62A5F196}|HelpyWeb6.0.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD56A5D9-5107-45A6-8473-AD3C62A5F196}|HelpyWeb6.0.csproj|c:\\users\\wmc\\desktop\\helpy-git\\helpyadminpanel\\helpyweb6.0\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD56A5D9-5107-45A6-8473-AD3C62A5F196}|HelpyWeb6.0.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD56A5D9-5107-45A6-8473-AD3C62A5F196}|HelpyWeb6.0.csproj|c:\\users\\wmc\\desktop\\helpy-git\\helpyadminpanel\\helpyweb6.0\\repository\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD56A5D9-5107-45A6-8473-AD3C62A5F196}|HelpyWeb6.0.csproj|solutionrelative:repository\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD56A5D9-5107-45A6-8473-AD3C62A5F196}|HelpyWeb6.0.csproj|c:\\users\\wmc\\desktop\\helpy-git\\helpyadminpanel\\helpyweb6.0\\data\\helpydbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD56A5D9-5107-45A6-8473-AD3C62A5F196}|HelpyWeb6.0.csproj|solutionrelative:data\\helpydbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD56A5D9-5107-45A6-8473-AD3C62A5F196}|HelpyWeb6.0.csproj|c:\\users\\wmc\\desktop\\helpy-git\\helpyadminpanel\\helpyweb6.0\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{BD56A5D9-5107-45A6-8473-AD3C62A5F196}|HelpyWeb6.0.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD56A5D9-5107-45A6-8473-AD3C62A5F196}|HelpyWeb6.0.csproj|c:\\users\\wmc\\desktop\\helpy-git\\helpyadminpanel\\helpyweb6.0\\wwwroot\\js\\dashboard\\dashboard.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{BD56A5D9-5107-45A6-8473-AD3C62A5F196}|HelpyWeb6.0.csproj|solutionrelative:wwwroot\\js\\dashboard\\dashboard.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD56A5D9-5107-45A6-8473-AD3C62A5F196}|HelpyWeb6.0.csproj|c:\\users\\wmc\\desktop\\helpy-git\\helpyadminpanel\\helpyweb6.0\\viewmodel\\userregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD56A5D9-5107-45A6-8473-AD3C62A5F196}|HelpyWeb6.0.csproj|solutionrelative:viewmodel\\userregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD56A5D9-5107-45A6-8473-AD3C62A5F196}|HelpyWeb6.0.csproj|c:\\users\\wmc\\desktop\\helpy-git\\helpyadminpanel\\helpyweb6.0\\models\\users.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BD56A5D9-5107-45A6-8473-AD3C62A5F196}|HelpyWeb6.0.csproj|solutionrelative:models\\users.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -30,7 +50,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -42,11 +62,59 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\WMC\\Desktop\\helpy-git\\helpyAdminPanel\\HelpyWeb6.0\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\WMC\\Desktop\\helpy-git\\helpyAdminPanel\\HelpyWeb6.0\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAACoAAAAAAAAAAACRPSYAAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-25T23:44:29.891Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UserRepository.cs",
+              "DocumentMoniker": "C:\\Users\\WMC\\Desktop\\helpy-git\\helpyAdminPanel\\HelpyWeb6.0\\Repository\\UserRepository.cs",
+              "RelativeDocumentMoniker": "Repository\\UserRepository.cs",
+              "ToolTip": "C:\\Users\\WMC\\Desktop\\helpy-git\\helpyAdminPanel\\HelpyWeb6.0\\Repository\\UserRepository.cs",
+              "RelativeToolTip": "Repository\\UserRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T23:40:03.236Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "HelpyDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\WMC\\Desktop\\helpy-git\\helpyAdminPanel\\HelpyWeb6.0\\Data\\HelpyDbContext.cs",
+              "RelativeDocumentMoniker": "Data\\HelpyDbContext.cs",
+              "ToolTip": "C:\\Users\\WMC\\Desktop\\helpy-git\\helpyAdminPanel\\HelpyWeb6.0\\Data\\HelpyDbContext.cs",
+              "RelativeToolTip": "Data\\HelpyDbContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T23:39:12.995Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\WMC\\Desktop\\helpy-git\\helpyAdminPanel\\HelpyWeb6.0\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\WMC\\Desktop\\helpy-git\\helpyAdminPanel\\HelpyWeb6.0\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAABQAAAAAAAAAAAB6PSoAAAA7AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T23:32:33.224Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "UserRegistration.cs",
-              "DocumentMoniker": "C:\\Users\\WMC\\Desktop\\HelpyWebAdmin\\HelpyWeb6.0\\ViewModel\\UserRegistration.cs",
+              "DocumentMoniker": "C:\\Users\\WMC\\Desktop\\helpy-git\\helpyAdminPanel\\HelpyWeb6.0\\ViewModel\\UserRegistration.cs",
               "RelativeDocumentMoniker": "ViewModel\\UserRegistration.cs",
-              "ToolTip": "C:\\Users\\WMC\\Desktop\\HelpyWebAdmin\\HelpyWeb6.0\\ViewModel\\UserRegistration.cs",
+              "ToolTip": "C:\\Users\\WMC\\Desktop\\helpy-git\\helpyAdminPanel\\HelpyWeb6.0\\ViewModel\\UserRegistration.cs",
               "RelativeToolTip": "ViewModel\\UserRegistration.cs",
               "ViewState": "AQIAAB0AAABA+/////8hwC0AAAAoAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -54,11 +122,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 7,
               "Title": "dashboard.js",
-              "DocumentMoniker": "C:\\Users\\WMC\\Desktop\\HelpyWebAdmin\\HelpyWeb6.0\\wwwroot\\js\\Dashboard\\dashboard.js",
+              "DocumentMoniker": "C:\\Users\\WMC\\Desktop\\helpy-git\\helpyAdminPanel\\HelpyWeb6.0\\wwwroot\\js\\Dashboard\\dashboard.js",
               "RelativeDocumentMoniker": "wwwroot\\js\\Dashboard\\dashboard.js",
-              "ToolTip": "C:\\Users\\WMC\\Desktop\\HelpyWebAdmin\\HelpyWeb6.0\\wwwroot\\js\\Dashboard\\dashboard.js",
+              "ToolTip": "C:\\Users\\WMC\\Desktop\\helpy-git\\helpyAdminPanel\\HelpyWeb6.0\\wwwroot\\js\\Dashboard\\dashboard.js",
               "RelativeToolTip": "wwwroot\\js\\Dashboard\\dashboard.js",
               "ViewState": "AQIAAAQAAACg/v////8twA0AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
@@ -66,24 +134,36 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "HomeController.cs",
-              "DocumentMoniker": "C:\\Users\\WMC\\Desktop\\HelpyWebAdmin\\HelpyWeb6.0\\Controllers\\HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\WMC\\Desktop\\helpy-git\\helpyAdminPanel\\HelpyWeb6.0\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
-              "ToolTip": "C:\\Users\\WMC\\Desktop\\HelpyWebAdmin\\HelpyWeb6.0\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\WMC\\Desktop\\helpy-git\\helpyAdminPanel\\HelpyWeb6.0\\Controllers\\HomeController.cs",
               "RelativeToolTip": "Controllers\\HomeController.cs",
-              "ViewState": "AQIAABoAAADAzczMzMwkwB8AAABCAAAA",
+              "ViewState": "AQIAABAAAAAAAAAAAAAlwB8AAAAmAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-24T19:44:05.078Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\WMC\\Desktop\\helpy-git\\helpyAdminPanel\\HelpyWeb6.0\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\WMC\\Desktop\\helpy-git\\helpyAdminPanel\\HelpyWeb6.0\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-11-25T23:41:46.987Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "Users.cs",
-              "DocumentMoniker": "C:\\Users\\WMC\\Desktop\\HelpyWebAdmin\\HelpyWeb6.0\\Models\\Users.cs",
+              "DocumentMoniker": "C:\\Users\\WMC\\Desktop\\helpy-git\\helpyAdminPanel\\HelpyWeb6.0\\Models\\Users.cs",
               "RelativeDocumentMoniker": "Models\\Users.cs",
-              "ToolTip": "C:\\Users\\WMC\\Desktop\\HelpyWebAdmin\\HelpyWeb6.0\\Models\\Users.cs",
+              "ToolTip": "C:\\Users\\WMC\\Desktop\\helpy-git\\helpyAdminPanel\\HelpyWeb6.0\\Models\\Users.cs",
               "RelativeToolTip": "Models\\Users.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAvAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -91,16 +171,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 6,
               "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\WMC\\Desktop\\HelpyWebAdmin\\HelpyWeb6.0\\Views\\Home\\Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\WMC\\Desktop\\helpy-git\\helpyAdminPanel\\HelpyWeb6.0\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
-              "ToolTip": "C:\\Users\\WMC\\Desktop\\HelpyWebAdmin\\HelpyWeb6.0\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\WMC\\Desktop\\helpy-git\\helpyAdminPanel\\HelpyWeb6.0\\Views\\Home\\Index.cshtml",
               "RelativeToolTip": "Views\\Home\\Index.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAFcCAABKAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAFcCAAA/AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-24T19:38:25.475Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-24T19:38:25.475Z"
             }
           ]
         }

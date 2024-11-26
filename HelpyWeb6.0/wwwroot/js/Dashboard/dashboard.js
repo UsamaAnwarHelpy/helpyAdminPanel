@@ -15,7 +15,7 @@
         var formData = new FormData($('#registrationForm')[0]);
 
         $.ajax({
-            url: '/Home/Register', // Change the URL if your controller route differs
+            url: '/User/Register', // Change the URL if your controller route differs
             type: 'POST',
             data: formData,
             processData: false,

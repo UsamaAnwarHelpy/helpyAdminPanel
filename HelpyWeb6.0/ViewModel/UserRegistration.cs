@@ -1,8 +1,8 @@
-﻿using Microsoft.AspNetCore.Http;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 
-public class UserRegistrationViewModel
+public class UserRegistration
 {
+    [Required]
     public int Age { get; set; }
     public DateTime Birthday { get; set; }
     public string Description { get; set; }
@@ -19,16 +19,17 @@ public class UserRegistrationViewModel
     public string Occupation { get; set; }
     //[Required]
     public List<int> SelectedItems { get; set; }
-
+    //[Required]
     [Display(Name = "Upload Public Images")]
     [MinLength(1, ErrorMessage = "Please upload at least 1 image.")]
     [MaxLength(4, ErrorMessage = "You can upload a maximum of 4 images.")]
-    public List<IFormFile> PublicImages { get; set; }
-
+    public IEnumerable<IFormFile> PublicImages { get; set; }
+    //[Required]
     [Display(Name = "Upload Private Images")]
     [MinLength(1, ErrorMessage = "Please upload at least 1 image.")]
     [MaxLength(4, ErrorMessage = "You can upload a maximum of 4 images.")]
-    public List<IFormFile> PrivateImages { get; set; }
+    public IEnumerable<IFormFile> PrivateImages { get; set; }
+    //[Required]
     public string Sexuality { get; set; }
     //[Required]
     public string City { get; set; }
@@ -44,4 +45,5 @@ public class UserRegistrationViewModel
     public string Language { get; set; }
     public string? RelationshipStatus { get; set; }
     public string? Smoking { get; set; }
+    //public string Location { get; set; }
 }

@@ -2,7 +2,7 @@
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <ActiveDebugProfile>HelpyWeb6._0</ActiveDebugProfile>
-    <NameOfLastUsedPublishProfile>C:\Users\WMC\Desktop\HelpyWebAdmin\HelpyWeb6.0\Properties\PublishProfiles\dxrao752-001-site1 - Web Deploy.pubxml</NameOfLastUsedPublishProfile>
+    <NameOfLastUsedPublishProfile>C:\Users\WMC\Desktop\helpy-git\helpyAdminPanel\HelpyWeb6.0\Properties\PublishProfiles\dxrao752-001-site1 - Web Deploy1.pubxml</NameOfLastUsedPublishProfile>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DebuggerFlavor>ProjectDebugger</DebuggerFlavor>

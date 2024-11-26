@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\WMC\\Desktop\\HelpyWebAdmin\\HelpyWeb6.0\\HelpyWeb6.0.csproj": {}
+    "C:\\Users\\WMC\\Desktop\\helpy-git\\helpyAdminPanel\\HelpyWeb6.0\\HelpyWeb6.0.csproj": {}
   },
   "projects": {
-    "C:\\Users\\WMC\\Desktop\\HelpyWebAdmin\\HelpyWeb6.0\\HelpyWeb6.0.csproj": {
+    "C:\\Users\\WMC\\Desktop\\helpy-git\\helpyAdminPanel\\HelpyWeb6.0\\HelpyWeb6.0.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\WMC\\Desktop\\HelpyWebAdmin\\HelpyWeb6.0\\HelpyWeb6.0.csproj",
+        "projectUniqueName": "C:\\Users\\WMC\\Desktop\\helpy-git\\helpyAdminPanel\\HelpyWeb6.0\\HelpyWeb6.0.csproj",
         "projectName": "HelpyWeb6.0",
-        "projectPath": "C:\\Users\\WMC\\Desktop\\HelpyWebAdmin\\HelpyWeb6.0\\HelpyWeb6.0.csproj",
+        "projectPath": "C:\\Users\\WMC\\Desktop\\helpy-git\\helpyAdminPanel\\HelpyWeb6.0\\HelpyWeb6.0.csproj",
         "packagesPath": "C:\\Users\\WMC\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\WMC\\Desktop\\HelpyWebAdmin\\HelpyWeb6.0\\obj\\",
+        "outputPath": "C:\\Users\\WMC\\Desktop\\helpy-git\\helpyAdminPanel\\HelpyWeb6.0\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -48,13 +48,47 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Dapper": {
+              "target": "Package",
+              "version": "[2.1.35, )"
+            },
+            "Firebase.Auth": {
+              "target": "Package",
+              "version": "[1.0.0, )"
+            },
+            "FirebaseAdmin": {
+              "target": "Package",
+              "version": "[3.1.0, )"
+            },
+            "FirebaseStorage.net": {
+              "target": "Package",
+              "version": "[1.0.3, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.36, )"
+            },
             "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
+              "target": "Package",
+              "version": "[6.0.36, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.36, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
               "target": "Package",
               "version": "[6.0.36, )"
             },
             "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
               "target": "Package",
               "version": "[1.19.6, )"
+            },
+            "Pomelo.EntityFrameworkCore.MySql": {
+              "target": "Package",
+              "version": "[6.0.3, )"
             }
           },
           "imports": [

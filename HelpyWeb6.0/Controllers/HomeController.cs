@@ -1,23 +1,37 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using System.Diagnostics;
+using HelpyAdmin.Data;
 using HelpyAdmin.Models;
+using HelpyAdmin.Repository.Interface;
+using HelpyWebApi.Repository.Interface;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using System.Diagnostics;
 
-namespace HelpyWeb6._0.Controllers
+namespace HelpyAdmin.Controllers
 {
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-
-        public HomeController(ILogger<HomeController> logger)
+        private readonly SignInManager<Users> signInManager;
+        private readonly IUserRepository _userRepository;
+        private readonly IBills _billsRepository;
+        private readonly HelpyDbContext _context;
+        public HomeController(ILogger<HomeController> logger, IBills billsRepository, IUserRepository repository, HelpyDbContext context)
         {
             _logger = logger;
+            _billsRepository = billsRepository;
+            _userRepository = repository;
+            _context = context;
         }
 
         public IActionResult Index()
         {
+            var users = _context.Users.ToList();
+            ViewData["users"] = users;
+            var bills = _context.Bills.ToList();
+            ViewData["Bills"] = bills;
             return View();
         }
-
         public IActionResult Privacy()
         {
             return View();
@@ -27,45 +41,6 @@ namespace HelpyWeb6._0.Controllers
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-        }
-        [HttpPost]
-        public async Task<IActionResult> Register(UserRegistrationViewModel model)
-        {
-            if (!ModelState.IsValid)
-            {
-                return Json(new { success = false, errors = ModelState.Values.SelectMany(v => v.Errors).Select(e => e.ErrorMessage) });
-            }
-
-            // Save public images
-            if (model.PublicImages != null)
-            {
-                foreach (var file in model.PublicImages)
-                {
-                    var filePath = Path.Combine("wwwroot/uploads/public", file.FileName);
-                    using (var stream = new FileStream(filePath, FileMode.Create))
-                    {
-                        await file.CopyToAsync(stream);
-                    }
-                }
-            }
-
-            // Save private images
-            if (model.PrivateImages != null)
-            {
-                foreach (var file in model.PrivateImages)
-                {
-                    var filePath = Path.Combine("wwwroot/uploads/private", file.FileName);
-                    using (var stream = new FileStream(filePath, FileMode.Create))
-                    {
-                        await file.CopyToAsync(stream);
-                    }
-                }
-            }
-
-            // Process the rest of the form data
-            // Save model properties like Age, Birthday, etc., to the database
-
-            return Json(new { success = true, message = "Registration successful" });
         }
     }
 }
